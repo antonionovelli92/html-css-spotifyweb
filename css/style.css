@@ -6,14 +6,101 @@
 }
 
 /* skills */
+.border-black {
+    border: 1px dashed black;
+}
+
+.border-red {
+    border: 1px dashed red;
+}
+
+.w-80 {
+    flex-basis: 80%;
+}
+
+.w-20 {
+    flex-basis: 20%;
+}
+
+/* ? colors */
+:root {
+    --bg-dark-blu: #141922;
+    --black: #000000;
+    --black-transparent: rgba(0, 0, 0, 0.233);
+    --dark-gray: #282828;
+    --text: #EDEEED;
+}
 
 /* generics */
 body {
     font-family: 'Montserrat', sans-serif;
+    color: var(--text);
 }
+
 
 /* utils */
 .container {
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
+
+}
+
+/* sidebar */
+.sidebar {
+    background-color: yellow;
+    flex: ;
+
+
+}
+
+.main-web {
+    display: flex;
+
+}
+
+/* sezione main-content */
+.main-header {
+    background-color: var(--black-transparent);
+    min-height: 80px;
+    padding: 2rem 3rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+
+}
+
+.main-content {
+
+    height: calc(100vh - 200px);
+    overflow-y: auto;
+    background-color: var(--bg-dark-blu);
+}
+
+
+
+#main-album {
+
+    overflow-y: auto;
+
+
+}
+
+
+/* ! FOOTER */
+#footer-nav {
+    position: sticky;
+    top: 0;
+    left: 100%;
+    background-color: var(--dark-gray);
+    min-height: 80px;
+    padding: 2rem 3rem;
+
+}
+
+.footer-menu {}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
 }
