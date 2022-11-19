@@ -47,8 +47,7 @@ body {
 
 /* sidebar */
 .sidebar {
-    background-color: yellow;
-    flex: ;
+    background-color: var(--black);
 
 
 }
