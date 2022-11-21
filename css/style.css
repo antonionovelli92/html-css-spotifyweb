@@ -22,6 +22,7 @@
     --black-transparent: rgba(0, 0, 0, 0.4);
     --dark-gray: #282828;
     --text: #EDEEED;
+    --text-light: #FFFFFF;
 }
 
 /* generics */
@@ -32,6 +33,7 @@ body {
 
 img {
     max-width: 100%;
+
 }
 
 li {
@@ -68,18 +70,25 @@ footer {
     flex: 0 0 50px;
     background-color: var(--black);
     /* todo  */
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 
 }
 
-.sidebar-menu {
-    display: flex;
+.sidebar-menu> {
+
     flex-direction: column;
+    min-height: 100%;
     align-content: space-between;
+    justify-content: space-between;
 
 }
+
+
+/* .sidebar-menu>* {
+    align-content: space-between;
+} */
 
 .sidebar-menu ul {
     margin: 0.6rem auto;
@@ -96,10 +105,47 @@ img {
     display: none;
 }
 
-.sidebar-menu li:hover {
+.sidebar-menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340%;
+}
+
+.sidebar-menu-list li:hover {
     border-left: 1px solid lightgreen;
     cursor: pointer;
 }
+
+.sb-menu-up span {
+    color: var(--text-light);
+    font-size: 11px;
+    padding: 0.3rem;
+    display: none;
+}
+
+
+.sb-menu-up li {
+    margin: 3px auto;
+}
+
+.sidebar-list-hidden {
+    overflow-y: auto;
+    display: none;
+}
+
+.sidebar-list-hidden li {
+    font-size: 12px;
+    margin: 1rem auto;
+
+}
+
+.sidebar-list-hidden h3 {
+    margin-left: 0.6rem;
+    font-size: 15px;
+    margin-top: 1rem;
+}
+
 
 
 /* MAIN */
@@ -193,7 +239,7 @@ header {
         display: block;
     }
 
-    .sidebar .sb-menu-up .logo-hidden img {
+    .sidebar .sidebar-content .logo-hidden img {
 
         margin-top: 0.6rem;
         margin-bottom: 1rem;
@@ -202,13 +248,13 @@ header {
         margin-left: 0rem;
     }
 
-    .sb-menu-up .logo-small {
+    .sidebar-content .logo-small {
         display: none;
     }
 
-    .sidebar-menu .logo-small,
+    .sidebar-content .logo-small,
     img {
-        margin: 3px auto;
+        margin: 0 auto;
         width: auto;
 
     }
@@ -216,6 +262,21 @@ header {
     .sidebar li {
         padding-left: 0.6rem;
     }
+
+    .sidebar-menu-list {
+        min-height: 123%;
+    }
+
+    .sb-menu-up span {
+        display: inline-block;
+    }
+
+    .sidebar-list-hidden {
+        overflow-y: auto;
+        display: block;
+    }
+
+
 
     /* ? M.Q. DESKTOP */
     @media screen and (min-width: 1200px) {}
