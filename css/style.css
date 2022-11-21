@@ -14,19 +14,12 @@
     border: 1px dashed red;
 }
 
-.w-80 {
-    flex-basis: 80%;
-}
-
-.w-20 {
-    flex-basis: 20%;
-}
-
-/* ? colors */
 :root {
+    /* ? colors */
+
     --bg-dark-blu: #141922;
     --black: #000000;
-    --black-transparent: rgba(0, 0, 0, 0.233);
+    --black-transparent: rgba(0, 0, 0, 0.4);
     --dark-gray: #282828;
     --text: #EDEEED;
 }
@@ -37,6 +30,9 @@ body {
     color: var(--text);
 }
 
+img {
+    max-width: 100%;
+}
 
 /* utils */
 .container {
@@ -45,61 +41,89 @@ body {
 
 }
 
-/* sidebar */
-.sidebar {
-    background-color: var(--black);
-
-
-}
-
-.main-web {
+/* * LAYOUT */
+.upper-content {
+    height: calc(100vh - 100px);
+    background-color: blue;
+    overflow-y: auto;
     display: flex;
-
 }
 
-/* sezione main-content */
-.main-header {
-    background-color: var(--black-transparent);
-    min-height: 80px;
-    padding: 2rem 3rem;
-    position: sticky;
-    top: 0;
-    width: 100%;
-
-
+footer {
+    height: 100px;
+    background-color: var(--dark-gray);
 }
 
-.main-content {
 
-    height: calc(100vh - 200px);
+/* ! PRIMA PARTE/UPPER-CONTENT */
+
+/* SIDEBAR */
+
+.sidebar {
+    flex: 0 0 50px;
+    background-color: var(--black);
+}
+
+/* MAIN */
+main {
+    flex: 1 1 auto;
     overflow-y: auto;
     background-color: var(--bg-dark-blu);
+    padding-top: 100px;
 }
 
-
-
-#main-album {
-
-    overflow-y: auto;
-
+/* MAIN-HEADER */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 50px);
+    background-color: var(--black-transparent);
+    height: 80px;
 
 }
+
+.header-menu {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-button {
+    align-items: center;
+}
+
+.header-button button {
+    background-color: var(--black-transparent);
+    color: var(--text);
+    border: 1px solid var(--text);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-button button:hover {
+    transform: scale(1.1);
+}
+
 
 
 /* ! FOOTER */
-#footer-nav {
-    position: sticky;
-    top: 0;
-    left: 100%;
-    background-color: var(--dark-gray);
-    min-height: 80px;
-    padding: 2rem 3rem;
 
+
+
+/* ? M.Q. TABLET */
+@media screen and (min-width: 576px) {
+    .sidebar {
+        flex-basis: 180px;
+    }
+
+    header {
+        width: calc(100% - 180px);
+    }
 }
 
-.footer-menu {}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-}
+/* ? M.Q. DESKTOP */
+@media screen and (min-width: 1200px) {}
