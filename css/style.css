@@ -34,6 +34,11 @@ img {
     max-width: 100%;
 }
 
+li {
+    list-style: none;
+
+}
+
 /* utils */
 .container {
     max-width: 600px;
@@ -62,7 +67,40 @@ footer {
 .sidebar {
     flex: 0 0 50px;
     background-color: var(--black);
+    /* todo  */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
 }
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+}
+
+.sidebar-menu ul {
+    margin: 0.6rem auto;
+}
+
+.sidebar-menu .logo-small,
+img {
+    height: 20px;
+    width: 100%;
+    margin: 3px auto;
+}
+
+.logo-hidden {
+    display: none;
+}
+
+.sidebar-menu li:hover {
+    border-left: 1px solid lightgreen;
+    cursor: pointer;
+}
+
 
 /* MAIN */
 main {
@@ -108,6 +146,33 @@ header {
     transform: scale(1.1);
 }
 
+/* MAIN-CONTENT */
+.main-navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.main-navbar li {
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 11px;
+}
+
+.main-navbar li:hover {
+    color: white;
+    text-shadow: 0px 0px 30px #f4f4f4;
+    border-bottom: 1px solid lightgreen;
+}
 
 
 /* ! FOOTER */
@@ -123,7 +188,34 @@ header {
     header {
         width: calc(100% - 180px);
     }
-}
 
-/* ? M.Q. DESKTOP */
-@media screen and (min-width: 1200px) {}
+    .logo-hidden {
+        display: block;
+    }
+
+    .sidebar .sb-menu-up .logo-hidden img {
+
+        margin-top: 0.6rem;
+        margin-bottom: 1rem;
+        height: 34px;
+        width: 80%;
+        margin-left: 0rem;
+    }
+
+    .sb-menu-up .logo-small {
+        display: none;
+    }
+
+    .sidebar-menu .logo-small,
+    img {
+        margin: 3px auto;
+        width: auto;
+
+    }
+
+    .sidebar li {
+        padding-left: 0.6rem;
+    }
+
+    /* ? M.Q. DESKTOP */
+    @media screen and (min-width: 1200px) {}
