@@ -220,6 +220,33 @@ header {
     border-bottom: 1px solid lightgreen;
 }
 
+/* MAIN ALBUM */
+.main-album .row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.col {
+    flex-basis: 50%;
+    min-height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.card {}
+
+.main-album .card img {
+    height: 240px;
+    width: 100%;
+
+}
+
+.main-album h2 {
+    margin: 1rem auto;
+    margin-left: 1rem;
+
+}
 
 /* ! FOOTER */
 
@@ -276,7 +303,15 @@ header {
         display: block;
     }
 
+    .col {
+        flex-basis: calc(100% / 4);
+    }
+
 
 
     /* ? M.Q. DESKTOP */
-    @media screen and (min-width: 1200px) {}
+    @media screen and (min-width: 1200px) {
+        .col {
+            flex-basis: calc(100% / 6);
+        }
+    }
