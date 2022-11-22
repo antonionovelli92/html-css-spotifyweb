@@ -108,8 +108,10 @@ img {
 .sidebar-menu-list {
     display: flex;
     flex-direction: column;
+    height: 100%;
+
     justify-content: space-between;
-    min-height: 340%;
+
 }
 
 .sidebar-menu-list li:hover {
@@ -323,7 +325,7 @@ h6 {
         display: block;
     }
 
-    .sidebar .sidebar-content .logo-hidden img {
+    .sidebar .logo-hidden img {
 
         margin-top: 0.6rem;
         margin-bottom: 1rem;
@@ -332,11 +334,11 @@ h6 {
         margin-left: 0rem;
     }
 
-    .sidebar-content .logo-small {
+    .sidebar .logo-small {
         display: none;
     }
 
-    .sidebar-content .logo-small,
+    .sidebar .logo-small,
     img {
         margin: 0 auto;
         width: auto;
@@ -347,9 +349,7 @@ h6 {
         padding-left: 0.6rem;
     }
 
-    .sidebar-menu-list {
-        min-height: 123%;
-    }
+    .sidebar-menu-list {}
 
     .sb-menu-up span {
         display: inline-block;
