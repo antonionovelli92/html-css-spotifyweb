@@ -59,6 +59,7 @@ li {
 footer {
     height: 100px;
     background-color: var(--dark-gray);
+
 }
 
 
@@ -73,25 +74,12 @@ footer {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-
+    overflow: hidden;
 }
-
-elimnare una sezione slide .sidebar-menu> {
-
-    flex-direction: column;
-    min-height: 100%;
-    align-content: space-between;
-    justify-content: space-between;
-
-}
-
-
-/* .sidebar-menu>* {
-    align-content: space-between;
-} */
 
 .sidebar-menu ul {
     margin: 0.6rem auto;
+
 }
 
 .sidebar-menu .logo-small,
@@ -109,7 +97,7 @@ img {
     display: flex;
     flex-direction: column;
     height: 100%;
-
+    opacity: 0.5;
     justify-content: space-between;
 
 }
@@ -117,7 +105,9 @@ img {
 .sidebar-menu-list li:hover {
     border-left: 1px solid lightgreen;
     cursor: pointer;
-    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 10px white;
 }
 
 .sb-menu-up span {
@@ -127,14 +117,20 @@ img {
     display: none;
 }
 
+.sb-menu-up {
+    ;
+
+}
+
 
 .sb-menu-up li {
     margin: 3px auto;
 }
 
 .sidebar-list-hidden {
-    overflow-y: auto;
+    overflow: auto;
     display: none;
+
 }
 
 .sidebar-list-hidden li {
@@ -149,6 +145,31 @@ img {
     margin-left: 0.6rem;
     font-size: 15px;
     margin-top: 1rem;
+}
+
+.name-playlist {
+    overflow: auto;
+}
+
+
+
+.sb-menu-down li {
+    margin: 5px auto;
+}
+
+.sb-menu-down span {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.sb-menu-down hr {
+    margin: 6px 25px;
+}
+
+.sb-menu-down .profile {
+    background-color: gray;
+    border-radius: 50%;
+
 }
 
 
@@ -277,6 +298,7 @@ h6 {
 .main-album .circle {
     border-radius: 50%;
 }
+
 
 
 /* todo: prova hover */
