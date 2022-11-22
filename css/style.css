@@ -117,10 +117,7 @@ img {
     display: none;
 }
 
-.sb-menu-up {
-    ;
-
-}
+.sb-menu-up {}
 
 
 .sb-menu-up li {
@@ -147,9 +144,9 @@ img {
     margin-top: 1rem;
 }
 
-.name-playlist {
+/* .name-playlist {
     overflow: auto;
-}
+} */
 
 
 
@@ -160,21 +157,22 @@ img {
 .sb-menu-down span {
     font-size: 10px;
     margin-left: 2px;
+
+
 }
 
 .sb-menu-down hr {
     margin: 6px 25px;
+    display: none;
 }
 
-.sb-menu-down .profile {
-    background-color: gray;
-    border-radius: 50%;
-
+.sb-menu-down span {
+    display: none;
 }
-
 
 
 /* MAIN */
+
 main {
     flex: 1 1 auto;
     overflow-y: auto;
@@ -240,11 +238,29 @@ header {
     font-size: 11px;
 }
 
-.main-navbar li:hover {
+/* .main-navbar li:hover {
     color: white;
     text-shadow: 0px 0px 30px #f4f4f4;
     border-bottom: 1px solid lightgreen;
+} */
+
+/************* prova*************** */
+.main-navbar li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    text-shadow: 0 0 30px white;
+    border-bottom: 1px solid lightgreen;
+    transition: width .3s;
 }
+
+.main-navbar li:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+
 
 /* MAIN ALBUM */
 .main-album {
@@ -302,31 +318,7 @@ h6 {
 
 
 /* todo: prova hover */
-/* .card:hover .overlayer {
-    visibility: visible;
-}
 
-.card .overlayer {
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.6);
-    text-align: center;
-    visibility: hidden;
-}
-
-.overlayer .fa-play-circle {
-    color: #fff;
-    font-size: 73px;
-    margin-top: 53px;
-    transition: 100ms ease-in-out;
-}
-
-.fa-play-circle:hover {
-    transform: scale(1.1);
-} */
 
 
 /* ! FOOTER */
@@ -389,6 +381,19 @@ h6 {
     .main-album .card img {
         height: 100%;
         width: 100%;
+    }
+
+    .sb-menu-down span {
+        display: inline-block;
+    }
+
+    .sb-menu-down .profile {
+        background-color: gray;
+        border-radius: 50%;
+    }
+
+    .sb-menu-down hr {
+        display: block;
     }
 
 
