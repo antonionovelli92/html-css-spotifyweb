@@ -349,6 +349,13 @@ header {
         flex-basis: calc(100% / 4);
     }
 
+    .main-album .card img {
+        height: 100%;
+        width: 100%;
+    }
+
+
+
 
 
     /* ? M.Q. DESKTOP */
