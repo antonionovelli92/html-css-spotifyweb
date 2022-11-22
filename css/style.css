@@ -41,6 +41,10 @@ li {
 
 }
 
+.d-flex {
+    display: flex;
+}
+
 /* utils */
 .container {
     max-width: 600px;
@@ -59,8 +63,107 @@ li {
 footer {
     height: 100px;
     background-color: var(--dark-gray);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
 
 }
+
+footer .left-view,
+.right-volume {
+
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+
+
+footer .left-view {
+    display: flex;
+    gap: 5px;
+}
+
+footer .left-title {
+    width: 50%;
+}
+
+footer .left-img,
+.left-icon {
+    width: 25%;
+}
+
+footer .left-title {
+    font-size: 10px;
+}
+
+footer .left-title h5 {
+    opacity: 0.6;
+}
+
+footer .left-icon a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 3px;
+
+}
+
+footer .left-icon a:hover .fa-heart {
+    color: red;
+    transform: scale(1.1);
+}
+
+footer .left-icon a:hover .fa-folder {
+    text-shadow: 0 0 5px white;
+    transform: scale(1.1);
+}
+
+/* footer .left-img:hover img {
+    box-shadow: 0 0 5px white;
+    transform: scale(1.3);
+} */
+
+
+footer img {
+    height: 50%;
+    width: 100%;
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+footer .player {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-controls i {
+    margin: auto 5px;
+    font-size: 20px;
+}
+
+.player-controls .fa-circle-play {
+    font-size: 35px;
+    margin: auto 1rem;
+
+}
+
+
+
+.player-controls i:hover {
+    text-shadow: 0 0 5px white;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
 
 
 /* ! PRIMA PARTE/UPPER-CONTENT */
@@ -438,6 +541,22 @@ h6 {
     .sb-menu-down hr {
         display: block;
     }
+
+    footer .left-view,
+    .right-volume {
+        width: 180px;
+    }
+
+    footer .player {
+        width: 50%;
+    }
+
+    footer .left-icon a {
+        font-size: 18px;
+        display: inline;
+    }
+
+
 
 
 
