@@ -162,8 +162,9 @@ img {
 }
 
 .sb-menu-down hr {
-    margin: 6px 25px;
+    margin: 6px 7px;
     display: none;
+    opacity: 0.7;
 }
 
 .sb-menu-down span {
@@ -188,6 +189,7 @@ header {
     width: calc(100% - 50px);
     background-color: var(--black-transparent);
     height: 80px;
+    z-index: 1;
 
 }
 
@@ -282,8 +284,11 @@ header {
 
 
 .main-album .card img {
-    height: 240px;
+    height: 100%;
     width: 100%;
+    position: relative;
+    transition: transform 0.6s;
+
 
 }
 
@@ -293,6 +298,44 @@ h6 {
     margin-left: 0.5rem;
 
 }
+
+.main-album .card {
+    cursor: pointer;
+
+}
+
+.main-album img {
+    display: block;
+}
+
+.main-album .card:hover .card-img {
+    transform: scale(1.05)translateY(-10px);
+
+}
+
+.main-album .card:hover .card-img::after {
+    content: '\f144';
+    text-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px white;
+    font-family: "font awesome 6 free";
+    font-size: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* .main-album .card-img:hover .circle::after {
+    border-radius: 50%;
+
+} */
 
 .card-text {
     text-align: center;
@@ -306,7 +349,7 @@ h6 {
 }
 
 .main-album h6 {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font-weight: lighter;
 
 }
