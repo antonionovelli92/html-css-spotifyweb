@@ -76,7 +76,7 @@ footer {
 
 }
 
-.sidebar-menu> {
+elimnare una sezione slide .sidebar-menu> {
 
     flex-direction: column;
     min-height: 100%;
@@ -224,6 +224,10 @@ header {
 }
 
 /* MAIN ALBUM */
+.main-album {
+    margin-left: 1rem;
+}
+
 .main-album .row {
     display: flex;
     flex-wrap: wrap;
@@ -234,7 +238,7 @@ header {
     flex-basis: 50%;
     min-height: 100%;
     width: 100%;
-    padding: 1rem;
+    padding: 6px;
 }
 
 
@@ -247,7 +251,7 @@ header {
 .main-album h2,
 h6 {
     margin: 1rem auto;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 
 }
 
