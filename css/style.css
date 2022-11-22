@@ -244,7 +244,8 @@ header {
 
 }
 
-.main-album h2 {
+.main-album h2,
+h6 {
     margin: 1rem auto;
     margin-left: 1rem;
 
@@ -259,6 +260,16 @@ header {
 .card-text h5 {
     font-weight: lighter;
 
+}
+
+.main-album h6 {
+    margin-left: 1rem;
+    font-weight: lighter;
+
+}
+
+.main-album .circle {
+    border-radius: 50%;
 }
 
 
